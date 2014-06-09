@@ -1,0 +1,11 @@
+name = Linkit Picker Sorl
+description = Linkit Picker Solr adds the possibility to "browse" apache solr documents.
+core = 7.x
+package = Linkit
+dependencies[] = linkit_picker (>=3)
+dependencies[] = apachesolr_views
+dependencies[] = views_php
+dependencies[] = apachesolr_multisitesearch
+files[] = "includes/linkit_picker_solr.views.inc"
+files[] = "includes/linkit_picker_solr.views_default.inc"
+files[] = "includes/linkit_picker_handler_field_solr_info.inc"
