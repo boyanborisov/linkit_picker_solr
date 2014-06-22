@@ -4,7 +4,7 @@ Linkit Picker Solr
 Linkit Picker is an extention to Linkit and Linkit picker (http://drupal.org/project/linkit and http://drupal.org/project/linkit_picker).
 Linkit Picker Solr adds the possibility to "browse" apache solr documents.
 
-Currenlty this module depende of apachesolr_views module and a lot of patches which are still waiting in the issue queue.
+Currenlty this module dependes of apachesolr_views module and a lot of patches which are still waiting in the issue queue.
 Please, see below:
 
 projects[apachesolr_views][type] = "module"
