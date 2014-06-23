@@ -70,21 +70,6 @@ function linkit_picker_solr_views_default_views() {
   $handler->display->display_options['fields']['bundle_name']['table'] = 'apachesolr__solr';
   $handler->display->display_options['fields']['bundle_name']['field'] = 'bundle_name';
   $handler->display->display_options['fields']['bundle_name']['label'] = 'Type';
-  /* Field: Global: PHP */
-  $handler->display->display_options['fields']['php']['id'] = 'php';
-  $handler->display->display_options['fields']['php']['table'] = 'views';
-  $handler->display->display_options['fields']['php']['field'] = 'php';
-  $handler->display->display_options['fields']['php']['label'] = 'Site';
-  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php']['php_output'] = '<?php
-  $_sites = apachesolr_multisitesearch_map_hash();
-  $_current_site =  $data->hash;
-  if(is_array($_sites) && isset($_sites[$_current_site])) {
-    echo $_sites[$_current_site];
-  }
-  ?>';
-  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
-  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
   /* Field: Apache Solr: url */
   $handler->display->display_options['fields']['url']['id'] = 'url';
   $handler->display->display_options['fields']['url']['table'] = 'apachesolr__solr';
@@ -96,6 +81,7 @@ function linkit_picker_solr_views_default_views() {
   $handler->display->display_options['fields']['linkit_picker']['table'] = 'linkit_picker_solr';
   $handler->display->display_options['fields']['linkit_picker']['field'] = 'linkit_picker';
   /* Sort criterion: Apache Solr: label */
+
   $handler->display->display_options['sorts']['label']['id'] = 'label';
   $handler->display->display_options['sorts']['label']['table'] = 'apachesolr__solr';
   $handler->display->display_options['sorts']['label']['field'] = 'label';
@@ -110,29 +96,6 @@ function linkit_picker_solr_views_default_views() {
   $handler->display->display_options['filters']['label']['expose']['label'] = 'Title';
   $handler->display->display_options['filters']['label']['expose']['operator'] = 'label_op';
   $handler->display->display_options['filters']['label']['expose']['identifier'] = 'label';
-
-  /* Filter criterion: Apache Solr: Multiple bundles filter */
-  $handler->display->display_options['filters']['bundle_multiple']['id'] = 'bundle_multiple';
-  $handler->display->display_options['filters']['bundle_multiple']['table'] = 'apachesolr__solr';
-  $handler->display->display_options['filters']['bundle_multiple']['field'] = 'bundle_multiple';
-  $handler->display->display_options['filters']['bundle_multiple']['group'] = 1;
-  $handler->display->display_options['filters']['bundle_multiple']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['bundle_multiple']['expose']['operator_id'] = 'bundle_multiple_op';
-  $handler->display->display_options['filters']['bundle_multiple']['expose']['label'] = 'Type';
-  $handler->display->display_options['filters']['bundle_multiple']['expose']['operator'] = 'bundle_multiple_op';
-  $handler->display->display_options['filters']['bundle_multiple']['expose']['identifier'] = 'bundle_multiple';
-
-  /* Filter criterion: Apache Solr: hash */
-  $handler->display->display_options['filters']['hash']['id'] = 'hash';
-  $handler->display->display_options['filters']['hash']['table'] = 'apachesolr__solr';
-  $handler->display->display_options['filters']['hash']['field'] = 'hash';
-  $handler->display->display_options['filters']['hash']['value'] = array();
-  $handler->display->display_options['filters']['hash']['group'] = 1;
-  $handler->display->display_options['filters']['hash']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['hash']['expose']['operator_id'] = '';
-  $handler->display->display_options['filters']['hash']['expose']['label'] = 'Site';
-  $handler->display->display_options['filters']['hash']['expose']['operator'] = 'hash_op';
-  $handler->display->display_options['filters']['hash']['expose']['identifier'] = 'hash';
 
   $views[$view->name] = $view;
 

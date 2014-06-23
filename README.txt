@@ -2,7 +2,7 @@ Linkit Picker Solr
 =============
 
 Linkit Picker is an extention to Linkit and Linkit picker (http://drupal.org/project/linkit and http://drupal.org/project/linkit_picker).
-Linkit Picker Solr adds the possibility to "browse" apache solr documents.
+Linkit Picker Solr adds the possibility to "browse" apache solr documents via apachesolr views.
 
 Currenlty this module dependes of apachesolr_views module and a lot of patches which are still waiting in the issue queue.
 Please, see below:
@@ -21,3 +21,7 @@ projects[apachesolr_views][patch][1766254] = "http://drupal.org/files/issues/apa
 projects[apachesolr_views][patch][2191157] = "http://drupal.org/files/issues/date_filter_relative-apachesolr_views-2191157-1.patch"
 projects[apachesolr_views][patch][2194541] = "http://drupal.org/files/issues/drush_site_install_errors-apachesolr_views-2194541-1.patch"
 projects[apachesolr_views][patch][1651386] = "http://drupal.org/files/apachesolr_views_decode_entities.patch"
+
+
+Actually you can use the module without appling the patches above but with them you will be able to create much more
+improved filters (site filter with autocomplete widget, content type filter with drop down list widget and etc)
