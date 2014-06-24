@@ -1,4 +1,4 @@
-name = Linkit Picker Sorl
+name = Linkit Picker Solr
 description = Linkit Picker Solr adds the possibility to "browse" apache solr documents.
 core = 7.x
 package = Linkit
